@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "crud-app": "npm start --prefix crud-app",
-    "dev": "concurrently \"npm run server\" \"npm run crud-app\" ",
+    "dev": "nodemon server.js ",
     "seed": "node seeder.js"
   },
   "repository": {
@@ -21,14 +21,18 @@
   },
   "homepage": "https://github.com/raymundogsim/crudapp#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "colors": "^1.4.0",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
     "mongoos": "^0.0.1-security",
     "mongoose": "^7.6.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.3"
   }
 }

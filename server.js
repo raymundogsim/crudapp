@@ -2,19 +2,19 @@ const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const dotanv = require('dotenv')
+const dotenv = require('dotenv')
 require('colors')
 const connectDb = require('./config/config');
 
-
 //dotenv config
-dotanv.config()
+dotenv.config()
 
 //db config
 connectDb();
 
 //rest obj
 const app = express();
+
 
 //middlewares
 app.use(cors());
@@ -25,8 +25,12 @@ app.use(morgan("dev"));
 
 
 //routes
-
 app.use('/api/items', require('./routes/itemRoutes'));
+app.use('/api/purchases', require('./routes/purchaseRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/posts', require('./routes/postRoutes'));
+
 
 
 //port

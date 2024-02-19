@@ -1,21 +1,21 @@
 const mongoose = require("mongoose");
-const dotanv = require('dotenv')
-const connectDb = require('./config/config')
-const itemModel = require('./models/itemModel')
-const items = require('./utils/data')
-require('colors')
+const dotenv = require('dotenv');
+const connectDb = require('./config/config');
+const postModel = require('./models/postModel');
+const { post } = require('./utils/data'); 
+require('colors');
 
-dotanv.config()
-connectDb()
+dotenv.config();
+connectDb();
 
 const importData = async () => {
     try {
-        await itemModel.deleteMany({});
-        const itemData = await itemModel.insertMany(items);
+        const postdel = await postModel.deleteMany({});
+        const postData = await postModel.insertMany(post);
         console.log("All Items Added".bgGreen);
         process.exit();      
     } catch (error) {
-        console.log(`${error}`.bgRed.inverse);
+        console.error(`${error}`.bgRed.inverse);
         process.exit(1);   
     }
 }

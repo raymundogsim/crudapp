@@ -1,24 +1,21 @@
-const empItems = [
+const post = [
     {
-        name: "Raymund Ogsimer",
-        age: 32
+      username: "admin",
+      title: "Post A"
     },
     {
-        name: "Jaybee Pido",
-        age: 29
+      username: "admin",
+      title: "Post B"
     },
     {
-        name: "Steven Alba",
-        age: 25
+      username: "admin",
+      title: "Post C"
     },
     {
-        name: "Brix Delute",
-        age: 26
-    },
-    {
-        name: "Reymel Aniano",
-        age: 24
+      username: "admin",
+      title: "Post D"
     }
-    ]
-    
-    module.exports = empItems;
+  ];
+  
+  module.exports = post;
+  

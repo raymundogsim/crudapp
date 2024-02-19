@@ -11,9 +11,9 @@ router.post("/add-item", addItemController);
 //METHOD - put
 router.put("/edit-item/:id", editItemController);
 
-router.delete("/delete-item/:id",  deleteItemController);
+router.delete("/delete-item/:id", deleteItemController);
 //get by ID
-router.get("get-item/:id", getItemsByIdController);
+router.get("/get-item-id/item", getItemsByIdController);
 
 
 module.exports = router;

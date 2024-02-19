@@ -1,0 +1,50 @@
+GET http://localhost:5050/api/posts/get-post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYWRtaW4iLCJpYXQiOjE3MDc4NTQyNzYsImV4cCI6MTcwNzk0MDY3Nn0.njmMSqGJyK_65TVxUW0BSBVtaxIiGRBveP0DuL7VOc8
+
+###LOGIN
+POST http://localhost:5050/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "123123123"
+}
+
+
+
+###
+
+GET http://localhost:5050/api/users/get-user
+
+###
+
+POST http://localhost:5050/api/users/add-user
+Content-Type: application/json
+
+{
+    "username": "mond",
+    "email": "mond@mail",
+    "isAdmin": true,
+    "password": "Prospernow"
+}
+
+
+
+###
+
+
+PUT http://localhost:5050/api/users/edit-user/65cb939129ddb10394cf7823
+Content-Type: application/json
+
+{
+    "username": "ray",
+    "email": "ray@mail",
+    "isAdmin": true,
+    "password": "Prospernow"
+}
+
+###
+
+
+DELETE http://localhost:5050/api/users/delete-user/65cb939129ddb10394cf7823
+

@@ -1,24 +1,33 @@
 const mongoose = require('mongoose');
 
+
 const itemSchema = mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    price: {
+    serial: {
         type: Number,
-        required: true
+        required: false
     },
-    category: {
+    businessUnit: {
         type: String,
-        required: true
+        required: false,
     },
-    image: {
+    inventoryId: {
         type: String,
-        required: null
+        required: null,
+    },
+    itemName: {
+        type: String,
+        required: true,
+    },
+     purchaseAmt: {
+        type: Number,
+        required: null,
+    },
+    quantity: {
+        type: Number,
+        required: false
     },
 },   
-    { timestamp: true }
+     { timestamps: true }
 );
 
 const itemModel = mongoose.model('items', itemSchema);
